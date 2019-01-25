@@ -173,6 +173,16 @@ function init()
 	cubeMaterialArray.push( new THREE.MeshBasicMaterial( { color: 0x4343ff } ) );
 	cubeMaterialArray.push( new THREE.MeshBasicMaterial( { color: 0x0833ff } ) );
 	var cubeMaterials = new THREE.MeshFaceMaterial( cubeMaterialArray );
+	var cubeMaterialsBlue = new THREE.MeshFaceMaterial( cubeMaterialArray );
+	var cubeMaterialArrayRed = [];
+	// order to add materials: x+,x-,y+,y-,z+,z-
+	cubeMaterialArrayRed.push( new THREE.MeshBasicMaterial( { color: 0xff0340 } ) );
+	cubeMaterialArrayRed.push( new THREE.MeshBasicMaterial( { color: 0xff0f40 } ) );
+	cubeMaterialArrayRed.push( new THREE.MeshBasicMaterial( { color: 0xff8f43 } ) );
+	cubeMaterialArrayRed.push( new THREE.MeshBasicMaterial( { color: 0xf30f43 } ) );
+	cubeMaterialArrayRed.push( new THREE.MeshBasicMaterial( { color: 0xf3434f } ) );
+	cubeMaterialArrayRed.push( new THREE.MeshBasicMaterial( { color: 0xf8334f } ) );
+	var cubeMaterialsRed = new THREE.MeshFaceMaterial( cubeMaterialArrayRed );
 	// Cube parameters: width (x), height (y), depth (z), 
 	//        (optional) segments along x, segments along y, segments along z
 	var cubeGeometry136 = new THREE.CubeGeometry( 20, 136, 20, 2, 1, 1 );
@@ -181,23 +191,23 @@ function init()
 	var cubeGeometry130 = new THREE.CubeGeometry( 20, 130, 20, 2, 1, 1 );
 	// using THREE.MeshFaceMaterial() in the constructor below
 	//   causes the mesh to use the materials stored in the geometry
-	cube = new THREE.Mesh( cubeGeometry136, cubeMaterials );
+	cube = new THREE.Mesh( cubeGeometry136, cubeMaterialsBlue );
 	cube.position.set(13, 68, 10);
 	scene.add( cube );		
-	cube2 = new THREE.Mesh( cubeGeometry136, cubeMaterials );
+	cube2 = new THREE.Mesh( cubeGeometry136, cubeMaterialsBlue );
 	cube2.position.set(13, 68, 35);
 	scene.add( cube2 );		
-	cube3 = new THREE.Mesh( cubeGeometry136, cubeMaterials );
+	cube3 = new THREE.Mesh( cubeGeometry136, cubeMaterialsBlue );
 	cube3.position.set(13, 68, 60);
 	scene.add( cube3 );		
-	cube4 = new THREE.Mesh( cubeGeometry136, cubeMaterials );
+	cube4 = new THREE.Mesh( cubeGeometry136, cubeMaterialsBlue );
 	cube4.position.set(13, 68, 85);
 	scene.add( cube4 );		
 	// New Bay Temp
-	cube5 = new THREE.Mesh( cubeGeometry130, cubeMaterials );
+	cube5 = new THREE.Mesh( cubeGeometry130, cubeMaterialsRed );
 	cube5.position.set(38, 65, 110);
 	scene.add( cube5 );		
-	cube6 = new THREE.Mesh( cubeGeometry133, cubeMaterials );
+	cube6 = new THREE.Mesh( cubeGeometry133, cubeMaterialsRed );
 	cube6.position.set(38, 67, 135);
 	scene.add( cube6 );		
 	
