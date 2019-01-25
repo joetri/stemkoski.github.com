@@ -175,24 +175,27 @@ function init()
 	var cubeMaterials = new THREE.MeshFaceMaterial( cubeMaterialArray );
 	// Cube parameters: width (x), height (y), depth (z), 
 	//        (optional) segments along x, segments along y, segments along z
-	var cubeGeometry136 = new THREE.CubeGeometry( 25, 136, 25, 1, 1, 1 );
+	var cubeGeometry136 = new THREE.CubeGeometry( 25, 136, 25, 2, 1, 1 );
 	var cubeGeometry135 = new THREE.CubeGeometry( 10, 135, 10, 1, 1, 1 );
 	// using THREE.MeshFaceMaterial() in the constructor below
 	//   causes the mesh to use the materials stored in the geometry
 	cube = new THREE.Mesh( cubeGeometry136, cubeMaterials );
-	cube.position.set(10, 0, 10);
+	cube.position.set(10, 68, 10);
 	scene.add( cube );		
 	cube2 = new THREE.Mesh( cubeGeometry136, cubeMaterials );
-	cube2.position.set(10, 0, 20);
+	cube2.position.set(10, 68, 20);
 	scene.add( cube2 );		
 	cube3 = new THREE.Mesh( cubeGeometry136, cubeMaterials );
-	cube3.position.set(10, 0, 30);
+	cube3.position.set(10, 68, 30);
 	scene.add( cube3 );		
 	cube4 = new THREE.Mesh( cubeGeometry136, cubeMaterials );
-	cube4.position.set(10, 0, 40);
+	cube4.position.set(10, 68, 40);
 	scene.add( cube4 );		
 	
-
+var gridXZ = new THREE.GridHelper(100, 10);
+	gridXZ.setColors( new THREE.Color(0x006600), new THREE.Color(0x006600) );
+	gridXZ.position.set( 0,130,100 );
+	scene.add(gridXZ);
 
 	// create a set of coordinate axes to help orient user
 	//    specify length in pixels in each direction
