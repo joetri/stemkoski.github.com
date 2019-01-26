@@ -117,11 +117,11 @@ function init()
 
 	var spritey = makeTextSprite( "Bay 2", 
 		{ fontsize: 24, borderColor: {r:250, g:80, b:85, a:1.0} } );
-	spritey.position.set(40,10,-25);
+	spritey.position.set(35,10,-25);
 	scene.add( spritey );
 	var spritey = makeTextSprite( "Bay 3",  // Green
 	{ fontsize: 24, borderColor: {r:125, g:230, b:100, a:1.0}, backgroundColor: {r:185, g:225, b:150, a:0.8} } );
-	spritey.position.set(65,10,-25);
+	spritey.position.set(60,10,-25);
 	scene.add( spritey );
 
 	// 131 is magic temp
@@ -182,7 +182,7 @@ function init()
 
     // Bay 3: 6:32 137
     cube = new THREE.Mesh( cubeGeometry136, cubeMaterialsGreen );
-    cube.position.set(70, 68, 10);
+    cube.position.set(65, 68, 10);
     scene.add( cube );
 	// Time stamp
 	var spritey = makeTextSprite( "Time: 00:06", 
@@ -199,9 +199,15 @@ function init()
     cube2.position.set(13, 69, 35);
     scene.add( cube2 );
 
-    cube3 = new THREE.Mesh( cubeGeometry136, cubeMaterialsBlue );
-    cube3.position.set(13, 68, 60);
+    // Bay 2: 01:06 136
+	var spritey = makeTextSprite( "Time: 01:06", 
+	{ fontsize: 24, borderColor: {r:25, g:30, b:20, a:1.0}, backgroundColor: {r:185, g:185, b:250, a:0.8} } );
+	spritey.position.set(90,20,0);
+	scene.add( spritey );
+    cube3 = new THREE.Mesh( cubeGeometry136, cubeMaterialsRed );
+    cube3.position.set(50, 68, 60);
     scene.add( cube3 );
+
     cube4 = new THREE.Mesh( cubeGeometry136, cubeMaterialsBlue );
     cube4.position.set(13, 68, 85);
     scene.add( cube4 );
