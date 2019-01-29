@@ -163,12 +163,12 @@ function init()
     var cubeMaterialsRed = new THREE.MeshFaceMaterial( cubeMaterialArrayRed );
     var cubeMaterialArrayYellow = [];
     // order to add materials: x+,x-,y+,y-,z+,z-
-    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x0ff320 } ) );
-    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x0fff40 } ) );
-    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x0fff43 } ) );
-    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x23ff43 } ) );
-    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x13f34f } ) );
-    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x08f34f } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x9ff320 } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x9fff40 } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x9fff43 } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x93ff43 } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x93f34f } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x98f34f } ) );
     var cubeMaterialsYellow = new THREE.MeshFaceMaterial( cubeMaterialArrayYellow );
     // Cube parameters: width (x), height (y), depth (z),
     //        (optional) segments along x, segments along y, segments along z
@@ -181,7 +181,7 @@ function init()
     //   causes the mesh to use the materials stored in the geometry
 
     // Bay 3: 6:32 137
-    cube = new THREE.Mesh( cubeGeometry136, cubeMaterialsGreen );
+    cube = new THREE.Mesh( cubeGeometry136, cubeMaterialsYellow );
     cube.position.set(65, 68, 10);
     scene.add( cube );
 	// Time stamp
