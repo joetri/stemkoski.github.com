@@ -180,33 +180,34 @@ function init()
     // using THREE.MeshFaceMaterial() in the constructor below
     //   causes the mesh to use the materials stored in the geometry
 
-    // Bay 3: 6:32 137
-    cube = new THREE.Mesh( cubeGeometry136, cubeMaterialsYellow );
-    cube.position.set(65, 68, 10);
-    scene.add( cube );
 	// Time stamp
 	var spritey = makeTextSprite( "Time: 00:06", 
 	{ fontsize: 24, borderColor: {r:25, g:30, b:20, a:1.0}, backgroundColor: {r:185, g:185, b:250, a:0.8} } );
 	spritey.position.set(90,20,0);
 	scene.add( spritey );
-
-    // Bay 1: 31:00 139
 	var spritey = makeTextSprite( "Time: 31:00", 
 	{ fontsize: 24, borderColor: {r:25, g:30, b:20, a:1.0}, backgroundColor: {r:185, g:185, b:250, a:0.8} } );
 	spritey.position.set(90,20,25);
 	scene.add( spritey );
-    cube2 = new THREE.Mesh( cubeGeometry138, cubeMaterialsBlue );
-    cube2.position.set(13, 69, 35);
-    scene.add( cube2 );
-
-    // Bay 2: 01:06 136
 	var spritey = makeTextSprite( "Time: 01:06", 
 	{ fontsize: 24, borderColor: {r:25, g:30, b:20, a:1.0}, backgroundColor: {r:185, g:185, b:250, a:0.8} } );
 	spritey.position.set(90,20,0);
 	scene.add( spritey );
+
+    // Bay 1: 31:00 139
+    cube2 = new THREE.Mesh( cubeGeometry138, cubeMaterialsBlue );
+    cube2.position.set(13, 69, 12);
+    scene.add( cube2 );
+
+    // Bay 2: 01:06 136
     cube3 = new THREE.Mesh( cubeGeometry136, cubeMaterialsRed );
     cube3.position.set(50, 68, 60);
     scene.add( cube3 );
+
+    // Bay 3: 6:32 137
+    cube = new THREE.Mesh( cubeGeometry136, cubeMaterialsYellow );
+    cube.position.set(65, 68, 10);
+    scene.add( cube );
 
 	var gridXZ = new THREE.GridHelper(100, 10);
     gridXZ.setColors( new THREE.Color(0x006600), new THREE.Color(0x006600) );
