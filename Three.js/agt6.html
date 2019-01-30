@@ -116,12 +116,16 @@ function init()
 	scene.add( spritey );
 
 	var spritey = makeTextSprite( "Bay 2", 
-		{ fontsize: 24, borderColor: {r:250, g:80, b:85, a:1.0} } );
+	{ fontsize: 24, borderColor: {r:250, g:80, b:85, a:1.0}, backgroundColor: {r:185, g:105, b:150, a:0.8} } );
 	spritey.position.set(35,10,-25);
 	scene.add( spritey );
-	var spritey = makeTextSprite( "Bay 3",  // Green
+	var spritey = makeTextSprite( "Bay 3", 
 	{ fontsize: 24, borderColor: {r:125, g:230, b:100, a:1.0}, backgroundColor: {r:185, g:225, b:150, a:0.8} } );
 	spritey.position.set(60,10,-25);
+	scene.add( spritey );
+	var spritey = makeTextSprite( "Bay 4", 
+	{ fontsize: 24, borderColor: {r:225, g:130, b:200, a:1.0}, backgroundColor: {r:185, g:25, b:250, a:0.8} } );
+	spritey.position.set(85,10,-25);
 	scene.add( spritey );
 
 	// 131 is magic temp
@@ -170,6 +174,16 @@ function init()
     cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x93834f } ) );
     cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x98a00f } ) );
     var cubeMaterialsYellow = new THREE.MeshFaceMaterial( cubeMaterialArrayYellow );
+
+    var cubeMaterialArrayPurple = [];
+    cubeMaterialArrayPurple.push( new THREE.MeshBasicMaterial( { color: 0x9f23a0 } ) );
+    cubeMaterialArrayPurple.push( new THREE.MeshBasicMaterial( { color: 0x9f2fa0 } ) );
+    cubeMaterialArrayPurple.push( new THREE.MeshBasicMaterial( { color: 0x9f2fa3 } ) );
+    cubeMaterialArrayPurple.push( new THREE.MeshBasicMaterial( { color: 0x932fa3 } ) );
+    cubeMaterialArrayPurple.push( new THREE.MeshBasicMaterial( { color: 0x9323af } ) );
+    cubeMaterialArrayPurple.push( new THREE.MeshBasicMaterial( { color: 0x9820af } ) );
+    var cubeMaterialsPurple = new THREE.MeshFaceMaterial( cubeMaterialArrayPurple );
+
     // Cube parameters: width (x), height (y), depth (z),
     //        (optional) segments along x, segments along y, segments along z
     var cubeGeometry138 = new THREE.CubeGeometry( 20, 138, 20, 2, 1, 1 );
@@ -208,6 +222,11 @@ function init()
     cube = new THREE.Mesh( cubeGeometry136, cubeMaterialsYellow );
     cube.position.set(65, 68, 60);
     scene.add( cube );
+
+    // Bay 4: purple
+    cube4 = new THREE.Mesh( cubeGeometry136, cubeMaterialsPurple );
+    cube4.position.set(88, 68, 85);
+    scene.add( cube4 );
 
 	var gridXZ = new THREE.GridHelper(100, 10);
     gridXZ.setColors( new THREE.Color(0x006600), new THREE.Color(0x006600) );
