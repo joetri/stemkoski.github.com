@@ -37,6 +37,14 @@ while(<>){
 			print "var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);";
 			print "sphere.position.set(".$x.", $z1, 5);";
 			print "scene.add(sphere);\n";
+		} elsif ($z4) {
+			print "var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialPurple);";
+			print "sphere.position.set(".$x.", $z4, 20);";
+			print "scene.add(sphere);\n";
+		} elsif ($z2) {
+			print "var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialRed);";
+			print "sphere.position.set(".$x.", $z2, 10);";
+			print "scene.add(sphere);\n";
 		}
 		#print "Match on date: $date\ttwi: $twi\ttwo: $two\n";
 		#print "\tO2: $o2\tz1: $z1\tz2: $z2\tz3: $z3\tz4: $z4\n";
