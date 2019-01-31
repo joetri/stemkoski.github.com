@@ -7,6 +7,7 @@ $count=0;
 my $header = <>;
 while(<>){
 	$count++;
+	next unless $count % 5;
 	if (/^
 		([^\t]+)	# time
 		\t
@@ -27,7 +28,7 @@ while(<>){
 		/x){
 		my ($date,$twi,$two,$o2,$z1,$z2,$z3,$z4) = 
 			($1,floor($2),floor($3),$4,$5,$6,$7,$8);
-		my $x = $count;
+		my $x = floor($count/5);
 		if ($z3) {
 			# Temp in zone 3
 			print "var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);";
