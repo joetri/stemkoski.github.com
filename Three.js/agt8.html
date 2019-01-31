@@ -127,7 +127,7 @@ function init()
 	// 131 is magic temp
 	var spritey = makeTextSprite( "131 Degrees F", 
 		{ fontsize: 24, borderColor: {r:128, g:128, b:128, a:1.0} } );
-	spritey.position.set(60,145,0);
+	spritey.position.set(60,145,90);
 	scene.add( spritey );
 
 
@@ -139,6 +139,8 @@ function init()
     //   (don't forget to add (at least one) light!)
     var sphereMaterialBlue = new THREE.MeshLambertMaterial( {color: 0x8888ff} );
     var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);
+    var sphereMaterialYellow = new THREE.MeshLambertMaterial( {color: 0xe8e86f} );
+    var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);
     sphere.position.set(60, 0, 0);
     scene.add(sphere);
 	var spritey = makeTextSprite( "Bay 1", 
@@ -154,33 +156,65 @@ function init()
     scene.add(sphere);
 
 
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(1, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(2, 135, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(3, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(4, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(5, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(6, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(7, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(8, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(9, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(10, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(11, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(12, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(13, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(14, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(15, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(16, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(17, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(18, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(19, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(20, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(21, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(22, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(23, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(24, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(25, 136, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(26, 137, 15);scene.add(sphere);
-var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(27, 137, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(1, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(2, 135, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(3, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(4, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(5, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(6, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(7, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(8, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(9, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(10, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(11, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(12, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(13, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(14, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(15, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(16, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(17, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(18, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(19, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(20, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(21, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(22, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(23, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(24, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(25, 136, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(26, 137, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);sphere.position.set(27, 137, 15);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(28, 131, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(29, 130, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(30, 130, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(31, 131, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(32, 131, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(33, 132, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(34, 132, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(35, 133, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(36, 133, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(37, 134, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(38, 134, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(39, 134, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(40, 135, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(41, 135, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(42, 135, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(43, 135, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(44, 135, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(45, 136, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(46, 136, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(47, 136, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(48, 136, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(49, 136, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(50, 136, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(51, 136, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(52, 137, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(53, 137, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(54, 137, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(55, 137, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(56, 137, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(57, 137, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(58, 137, 5);scene.add(sphere);
+var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);sphere.position.set(59, 137, 5);scene.add(sphere);
     // Create an array of materials to be used in a cube, one for each side
     var cubeMaterialArray = [];
     // order to add materials: x+,x-,y+,y-,z+,z-
