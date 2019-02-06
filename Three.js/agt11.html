@@ -118,6 +118,34 @@ function init()
     cubeMaterialArrayGreen.push( new THREE.MeshBasicMaterial( { color: 0x03834f } ) );
     cubeMaterialArrayGreen.push( new THREE.MeshBasicMaterial( { color: 0x08a00f } ) );
     var cubeMaterialsGreen = new THREE.MeshFaceMaterial( cubeMaterialArrayGreen );
+    var cubeMaterialArray = [];
+    // order to add materials: x+,x-,y+,y-,z+,z-
+    cubeMaterialArray.push( new THREE.MeshBasicMaterial( { color: 0x0f03f0 } ) );
+    cubeMaterialArray.push( new THREE.MeshBasicMaterial( { color: 0x0f0ff0 } ) );
+    cubeMaterialArray.push( new THREE.MeshBasicMaterial( { color: 0x8f8ff3 } ) );
+    cubeMaterialArray.push( new THREE.MeshBasicMaterial( { color: 0x330ff3 } ) );
+    cubeMaterialArray.push( new THREE.MeshBasicMaterial( { color: 0x4343ff } ) );
+    cubeMaterialArray.push( new THREE.MeshBasicMaterial( { color: 0x0833ff } ) );
+    var cubeMaterials = new THREE.MeshFaceMaterial( cubeMaterialArray );
+    var cubeMaterialsBlue = new THREE.MeshFaceMaterial( cubeMaterialArray );
+    var cubeMaterialArrayRed = [];
+    // order to add materials: x+,x-,y+,y-,z+,z-
+    cubeMaterialArrayRed.push( new THREE.MeshBasicMaterial( { color: 0xff0340 } ) );
+    cubeMaterialArrayRed.push( new THREE.MeshBasicMaterial( { color: 0xff0f40 } ) );
+    cubeMaterialArrayRed.push( new THREE.MeshBasicMaterial( { color: 0xff8f43 } ) );
+    cubeMaterialArrayRed.push( new THREE.MeshBasicMaterial( { color: 0xf30f43 } ) );
+    cubeMaterialArrayRed.push( new THREE.MeshBasicMaterial( { color: 0xf3434f } ) );
+    cubeMaterialArrayRed.push( new THREE.MeshBasicMaterial( { color: 0xf8334f } ) );
+    var cubeMaterialsRed = new THREE.MeshFaceMaterial( cubeMaterialArrayRed );
+    var cubeMaterialArrayYellow = [];
+    // order to add materials: x+,x-,y+,y-,z+,z-
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x9fe320 } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x9faf40 } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x9faf43 } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x93af03 } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x93834f } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x98a00f } ) );
+    var cubeMaterialsYellow = new THREE.MeshFaceMaterial( cubeMaterialArrayYellow );
 
    var cubeGeometryTest = new THREE.CubeGeometry( 10, 10, 10, 2, 1, 1 );
     // using THREE.MeshFaceMaterial() in the constructor below

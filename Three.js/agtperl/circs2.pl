@@ -29,11 +29,16 @@ while(<>){
 		my ($date,$twi,$two,$o2,$z1,$z2,$z3,$z4) = 
 			($1,floor($2),floor($3),$4,$5,$6,$7,$8);
 		my $x = floor($count/5);
+		my $ox = floor( $o2*10 ); # 13.9 => 139
 		if ($z3) {
 			# Temp in zone 3
 			print "var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialYellow);";
 			print "sphere.position.set(".$x.", $z3, 15);";
 			print "scene.add(sphere);\n";
+			print "var cube = new THREE.Mesh( cubeGeometrytest, cubeMaterialsYellow );\n";
+			print "cube.position.set($x, $ox, 15);\n";
+			print "scene.add( cube );\n";
+
 		} elsif ($z1) {
 			print "var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);";
 			print "sphere.position.set(".$x.", $z1, 5);";
