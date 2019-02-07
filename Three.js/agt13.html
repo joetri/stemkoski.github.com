@@ -139,15 +139,15 @@ function init()
     var cubeMaterialsRed = new THREE.MeshFaceMaterial( cubeMaterialArrayRed );
     var cubeMaterialArrayYellow = [];
     // order to add materials: x+,x-,y+,y-,z+,z-
-    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x9fe320 } ) );
-    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x9faf40 } ) );
-    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x9faf43 } ) );
-    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x93af03 } ) );
-    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x93834f } ) );
-    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x98a00f } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0x9fa320 } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0xafaf20 } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0xafcf03 } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0xc3af03 } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0xb3c32f } ) );
+    cubeMaterialArrayYellow.push( new THREE.MeshBasicMaterial( { color: 0xa8a00f } ) );
     var cubeMaterialsYellow = new THREE.MeshFaceMaterial( cubeMaterialArrayYellow );
 
-   var cubeGeometrytest = new THREE.CubeGeometry( 5, 5, 1, 2, 3, 2 );
+   var cubeGeometrytest = new THREE.CubeGeometry( 5, 5, 7, 2, 3, 2 );
     // using THREE.MeshFaceMaterial() in the constructor below
     //   causes the mesh to use the materials stored in the geometry
 
