@@ -63,8 +63,12 @@ function init()
 	var VIEW_ANGLE = 65, ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT, NEAR = 0.1, FAR = 20000;
 	camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR);
 	scene.add(camera);
-	camera.position.set(200,150,400);
-	camera.lookAt(scene.position);	
+	camera.position.set(200,150,200);
+	//camera.up = new THREE.Vector3(0,0,-1);
+    //camera.lookAt(new THREE.Vector3(200,0,0));
+
+	//camera.lookAt(scene.position);	
+	// camera.lookAt doesn't work when keyboard activated.
 	// RENDERER
 	if ( Detector.webgl )
 		renderer = new THREE.WebGLRenderer( {antialias:true} );
@@ -171,7 +175,7 @@ function init()
 
 	var spritey = makeTextSprite( "Trends_1004_180503", 
 	{ fontsize: 24, borderColor: {r:25, g:30, b:200, a:1.0}, backgroundColor: {r:128, g:128, b:255, a:0.8} } );
-	spritey.position.set(-60,150,25);
+	spritey.position.set(-60,20,155);
 	scene.add( spritey );
 	var spritey = makeTextSprite( "Bay 1", 
 	{ fontsize: 24, borderColor: {r:25, g:30, b:200, a:1.0}, backgroundColor: {r:128, g:128, b:255, a:0.8} } );
