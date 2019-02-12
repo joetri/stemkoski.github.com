@@ -53,9 +53,12 @@ while(<>){
 			print "sphere.position.set(".$x.", $ox, 5);";
 			print "scene.add(sphere);\n";
 			if ($printdate) {
-				    $datesprite = "var spritey = makeTextSprite( \"$date\",";
-					$datesprite .= "{ fontsize: 24, borderColor: {r:250, g:80, b:85, a:1.0}, backgroundColor: {r:185, g:105, b:150, a:0.8} } );";
-					$datesprite .= "spritey.position.set($x ,50,0);";
+					$_ = $date;
+					s/:\d\d .*//;
+					my $hm = $_;
+				    $datesprite = "var spritey = makeTextSprite( \"$hm\",";
+					$datesprite .= "{ fontsize: 16, borderColor: {r:50, g:80, b:85, a:1.0}, backgroundColor: {r:185, g:185, b:150, a:0.8} } );";
+					$datesprite .= "spritey.position.set($x ,20,0);";
 					$datesprite .= "scene.add( spritey );\n";
 					print $datesprite;
 					$printdate=0;
