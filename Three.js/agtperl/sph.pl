@@ -43,13 +43,22 @@ while(<>){
 			print "var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialBlue);";
 			print "sphere.position.set(".$x.", $z1, 5);";
 			print "scene.add(sphere);\n";
+			print "var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialGreen);";
+			print "sphere.position.set(".$x.", $ox, 5);";
+			print "scene.add(sphere);\n";
 		} elsif ($z4) {
 			print "var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialPurple);";
 			print "sphere.position.set(".$x.", $z4, 20);";
 			print "scene.add(sphere);\n";
+			print "var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialGreen);";
+			print "sphere.position.set(".$x.", $ox, 20);";
+			print "scene.add(sphere);\n";
 		} elsif ($z2) {
 			print "var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialRed);";
 			print "sphere.position.set(".$x.", $z2, 10);";
+			print "scene.add(sphere);\n";
+			print "var sphere = new THREE.Mesh(sphereGeometry, sphereMaterialGreen);";
+			print "sphere.position.set(".$x.", $ox, 10);";
 			print "scene.add(sphere);\n";
 		}
 		#print "Match on date: $date\ttwi: $twi\ttwo: $two\n";
