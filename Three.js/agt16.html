@@ -86,7 +86,7 @@ function init()
 	container.appendChild( stats.domElement );
 	// LIGHT
 	var light = new THREE.PointLight(0xbbbbbb);
-	light.position.set(0,150,80);
+	light.position.set(-30,150,180);
 	scene.add(light);
 	var light = new THREE.PointLight(0xbbbbbb);
 	light.position.set(0,100,-80);
@@ -185,6 +185,11 @@ function init()
 	{ fontsize: 24, borderColor: {r:225, g:130, b:200, a:1.0}, backgroundColor: {r:185, g:25, b:250, a:0.8} } );
 	spritey.position.set(-95,70,-35);
 	scene.add( spritey );
+	var spritey = makeTextSprite( "O2 Level", 
+	{ fontsize: 24, borderColor: {r:25, g:240, b:80, a:1.0}, backgroundColor: {r:65, g:225, b:50, a:0.8} } );
+	spritey.position.set(-125,70,-5);
+	scene.add( spritey );
+	//var sphere = new THREE.Mesh(sphereGeometryO2, sphereMaterialGreen);sphere.position.set(-94, 70, -60);scene.add(sphere);
 
 	// 131 is magic temp
 	var spritey = makeTextSprite( "131 Deg F / 13.1 O2", 
