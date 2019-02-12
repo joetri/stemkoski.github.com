@@ -13,6 +13,8 @@ This scene is cluttered and doesn't show a lot of variables, but I hope it does 
 	* There are similar patterns with temp and O2 levels rising and flattening
 	* We're above the 131 degree mark
 	 
-The data raises a lot of questions.  I've pulled data every 75 seconds to generate the scene.  Is that too often for the sampling?  Does it make sense to have the 4 bays displayed together?  Is the 3D treatment perhaps more useful to engineers?  Is the temp in a bay the last temp reading in that bay?  There are artifacts in the data due to the sampling system: the temps "blending" between bays are not actually a temp anywhere in a pile, but only in the air exchange system.
+The data raises a lot of questions.  I've pulled data every 75 seconds to generate the scene.  Is that too often for the sampling?  Does it make sense to have the 4 bays displayed together?  Is the 3D treatment perhaps more useful to engineers?  Is the temp in a bay the last temp reading in that bay?  There are artifacts in the data due to the sampling system: the temps "blending" between bays are not actually a temp anywhere in a pile, but only in the air exchange system.  For long term trends (pile temp over a week) this level of sampling granularity and the data display rules and structure would need to change.
+
+Technical details.  I used perl to transform the data file into a three.js scene description.  This is scriptable and I could easily display another data set using the same code.  Once the scene is written to an html file (with lots of javascript) the rendering of the file is done on the users browser and takes advantage of WebGL features in new browsers.  I have not implemented layers yet, but that is a feature available in three.js.
 
 JG 12 Feb 2019.
