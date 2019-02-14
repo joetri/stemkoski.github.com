@@ -40,7 +40,15 @@ while(<>){
 			#print "$date\t$twi\t$two\t";
 		$time = $date;
 		$time =~ s/:\d\d .*//;
-		print "$time\t";
+		# time now in hh:mm format
+		if ( $time =~ /(\d\d):(\d\d)/){
+			my ($h,$m) = ($1,$2);
+			my $mins = 60*$h + $m;
+			#$time =~ s/://;
+			print "$mins\t";
+		} else {
+			die('Bad Format');
+		}
 		$o2 *= 10;
 		$o2 = floor( $o2 );
 		print "$o2\t$z1\t$z2\t$z3\t$z4\n";
