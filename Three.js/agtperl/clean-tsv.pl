@@ -2,13 +2,19 @@
 # Clean up a tsv file and get ready to generate threejs scene from it.
 #
 use POSIX;
+use warnings;
+use strict;
 
 my $header = <>;
+my $count=0;
 #print "$header\n";
 print "Time	O2	T1	T2	T3	T4\n";
+# 'Time'  'O2'    'T1'    'T2'    'T3'    'T4'
+
 my $time;
 
 while(<>){
+	next if ($count++ % 5);
 	if (/^
 		([^\t]+)	# time
 		\t
