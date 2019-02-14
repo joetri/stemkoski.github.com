@@ -4,7 +4,10 @@
 use POSIX;
 
 my $header = <>;
-print "$header\n";
+#print "$header\n";
+print "Time	O2	T1	T2	T3	T4\n";
+my $time;
+
 while(<>){
 	if (/^
 		([^\t]+)	# time
@@ -28,7 +31,12 @@ while(<>){
 			($1,floor($2),floor($3),$4,$5,$6,$7,$8);
 			#print "Match on date: $date\ttwi: $twi\ttwo: $two\n";
 			#print "\tO2: $o2\tz1: $z1\tz2: $z2\tz3: $z3\tz4: $z4\n";
-		print "$date\t$twi\t$two\t";
+			#print "$date\t$twi\t$two\t";
+		$time = $date;
+		$time =~ s/:\d\d .*//;
+		print "$time\t";
+		$o2 *= 10;
+		$o2 = floor( $o2 );
 		print "$o2\t$z1\t$z2\t$z3\t$z4\n";
 	} elsif (/^
 		([^\t]+)	# time
